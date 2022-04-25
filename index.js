@@ -1,12 +1,10 @@
 /*
 CORS Anywhere as a Cloudflare Worker!
-(c) 2019 by Zibri (www.zibri.org)
-email: zibri AT zibri DOT org
-https://github.com/Zibri/cloudflare-cors-anywhere
+https://github.com/420rom/cloudflare-cors-anywhere
 */
 
 /*
-whitelist = [ "^http.?://www.zibri.org$", "zibri.org$", "test\\..*" ];  // regexp for whitelisted urls
+whitelist = [ "^http.?://www.420romwebinstaller.org$", "420romwebinstaller.org$", "test\\..*" ];  // regexp for whitelisted urls
 */
 
 blacklist = [ ];           // regexp for blacklisted urls
@@ -130,9 +128,8 @@ addEventListener("fetch", async event=>{
 
                 return new Response(
                 	"CLOUDFLARE-CORS-ANYWHERE\n\n" + 
-                	"Source:\nhttps://github.com/Zibri/cloudflare-cors-anywhere\n\n" + 
+                	"Source:\nhttps://github.com/420rom/cloudflare-cors-anywhere\n\n" + 
                 	"Usage:\n" + origin_url.origin + "/?uri\n\n" +
-			"Donate:\nhttps://paypal.me/Zibri/5\n\n" +
                 	"Limits: 100,000 requests/day\n" + 
                 	"          1,000 requests/10 minutes\n\n" + 
                 	(orig != null ? "Origin: " + orig + "\n" : "") + 
@@ -147,9 +144,7 @@ addEventListener("fetch", async event=>{
 
             return new Response(
                 "Create your own cors proxy</br>\n" + 
-                "<a href='https://github.com/Zibri/cloudflare-cors-anywhere'>https://github.com/Zibri/cloudflare-cors-anywhere</a></br>\n" +
-                "\nDonate</br>\n" +
-                "<a href='https://paypal.me/Zibri/5'>https://paypal.me/Zibri/5</a>\n",
+                "<a href='https://github.com/420rom/cloudflare-cors-anywhere'>https://github.com/420rom/cloudflare-cors-anywhere</a></br>\n",
                 {
                     status: 403,
                     statusText: 'Forbidden',
